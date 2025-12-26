@@ -3,56 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tải File QuanLiSach</title>
+    <title>Tải bộ cài Quản Lý Sách</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #e9ecef;
-        }
-        .card {
-            text-align: center;
-            padding: 40px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        h1 { color: #2c3e50; margin-bottom: 10px; }
-        p { color: #7f8c8d; }
-        .btn-download {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
-            background-color: #27ae60;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        .btn-download:hover { background-color: #219150; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background: #f0f2f5; }
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; width: 380px; }
+        h2 { color: #1a73e8; margin-bottom: 20px; }
+        .btn { display: block; margin: 15px 0; padding: 15px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: 0.3s; font-size: 16px; }
+        
+        /* Màu xanh lá cho file WAR */
+        .btn-war { background: #28a745; color: white; }
+        /* Màu xanh dương cho file SQL */
+        .btn-sql { background: #17a2b8; color: white; }
+        
+        .btn:hover { opacity: 0.8; transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        p { font-size: 0.9em; color: #666; line-height: 1.5; }
+        b { color: #333; }
     </style>
 </head>
 <body>
 
     <div class="card">
-        <h1>Đang chuẩn bị tải file...</h1>
-        <p>Tên file: <b>QuanLiSach.war</b></p>
-        <p>Nếu quá trình tải không bắt đầu, hãy nhấn nút dưới đây:</p>
-        <a href="QuanLiSach.war" class="btn-download" download>Tải về ngay</a>
-    </div>
+        <h2>Tải Tài Liệu Dự Án</h2>
+        <p>Chọn file tương ứng để tải về máy:</p>
+        
+        <!-- Nút tải file ứng dụng -->
+        <a href="QuanLiSach.war" class="btn btn-war" download>1. Tải QuanLiSach.war</a>
+        
+        <!-- Nút tải file Database (Đã sửa tên thành qlsach.sql) -->
+        <a href="qlsach.sql" class="btn btn-sql" download>2. Tải Cơ Sở Dữ Liệu (qlsach.sql)</a>
 
-    <script>
-        window.onload = function() {
-            // Tự động kích hoạt tải sau 1 giây
-            setTimeout(function() {
-                window.location.href = "QuanLiSach.war";
-            }, 1000);
-        }
-    </script>
+        <p style="margin-top:20px; border-top: 1px solid #eee;">
+            <b>Lưu ý:</b> Sau khi tải file SQL, hãy vào SQLyog để Import vào database của bạn.
+        </p>
+    </div>
 
 </body>
 </html>
