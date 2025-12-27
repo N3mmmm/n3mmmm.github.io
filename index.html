@@ -12,8 +12,10 @@
         
         /* Màu xanh lá cho file WAR */
         .btn-war { background: #28a745; color: white; }
-        /* Màu xanh dương cho file SQL */
+        /* Màu xanh dương nhạt cho file SQL */
         .btn-sql { background: #17a2b8; color: white; }
+        /* MỚI: Màu cam cho file Tài liệu (Word) */
+        .btn-doc { background: #fd7e14; color: white; }
         
         .btn:hover { opacity: 0.8; transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
         p { font-size: 0.9em; color: #666; line-height: 1.5; }
@@ -29,11 +31,14 @@
         <!-- Nút tải file ứng dụng -->
         <a href="QuanLiSach.war" class="btn btn-war" download>1. Tải QuanLiSach.war</a>
         
-        <!-- Nút tải file Database (Đã sửa tên thành qlsach.sql) -->
+        <!-- Nút tải file Database -->
         <a href="qlsach.sql" class="btn btn-sql" download>2. Tải Cơ Sở Dữ Liệu (qlsach.sql)</a>
 
-        <p style="margin-top:20px; border-top: 1px solid #eee;">
-            <b>Lưu ý:</b> Sau khi tải file SQL, hãy vào SQLyog để Import vào database của bạn.
+        <!-- MỚI: Nút tải file Tài liệu ôn tập -->
+        <a href="Tai lieu on tap.docx" class="btn btn-doc" download>3. Tải Tài liệu ôn tập (.docx)</a>
+
+        <p style="margin-top:20px; border-top: 1px solid #eee; padding-top: 15px;">
+            <b>Lưu ý:</b> Đảm bảo cả 3 file này nằm cùng thư mục với file HTML này để tải được.
         </p>
     </div>
 
